@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/layout_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_bottom"
+            android:backgroundTint="@color/primaryColorBlue"
+            android:elevation="@dimen/_4sdp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/title_home"
+            app:titleTextColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/layout_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@id/layout_app_bar">
+
+            <TextView
+                android:id="@+id/tv_welcoming_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                tools:text="@string/welcoming_text" />
+
+            <TextView
+                android:id="@+id/tv_today_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/subtitleTextOpacity50"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                tools:text="@string/today_date" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/background_rounded_outlined_grey"
+                android:padding="@dimen/_12sdp">
+
+                <TextView
+                    android:id="@+id/tv_calorie_needs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calorie_needs_per_day"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.ruthwikkk.widget.donutchart.DonutProgressView
+                    android:id="@+id/donut_chart"
+                    android:layout_width="@dimen/_160sdp"
+                    android:layout_height="@dimen/_160sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:defaultArcColour="@color/blue_200"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_calorie_needs"
+                    app:progressArcColour="@color/primaryColorBlue"
+                    app:progressArcWidth="@dimen/_22sdp"
+                    app:progressTextColour="@android:color/transparent" />
+
+                <TextView
+                    android:id="@+id/tv_calories_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/donut_chart"
+                    app:layout_constraintEnd_toEndOf="@id/donut_chart"
+                    app:layout_constraintStart_toStartOf="@id/donut_chart"
+                    app:layout_constraintTop_toTopOf="@id/donut_chart"
+                    tools:text="1000/2000 kcal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/donut_chart">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_eaten_calories"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16ssp"
+                            android:textStyle="bold"
+                            tools:text="@string/eaten_calories" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/eaten"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:drawableStartCompat="@drawable/ic_eaten" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_burned_calories"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16ssp"
+                            android:textStyle="bold"
+                            tools:text="@string/burned_calories" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/burned"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:drawableStartCompat="@drawable/ic_burn" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/background_rounded_outlined_grey_filled_yellow"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_8sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:layout_weight="2"
+                        android:text="@string/food"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:text="@string/quantity"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/date"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:text="@string/calories"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_rounded_outlined_grey"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_8sdp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_food_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_home_food_list" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/background_rounded_outlined_grey_filled_yellow"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_8sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:layout_weight="2"
+                        android:text="@string/activity"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/date"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:text="@string/calories"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_rounded_outlined_grey"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_8sdp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_exercise_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_home_exercise_list" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

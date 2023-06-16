@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">JXCAL</string>
+    <string name="title_activity_bottom_main">BottomMainActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_exercise">Exercise</string>
+    <string name="title_history">History</string>
+    <string name="title_profile">Profile</string>
+
+    <!-- Strings related to register -->
+    <string name="register_headline">Welcome,</string>
+    <string name="register_subtitle">Sign up to continue</string>
+    <string name="action_sign_up">Sign up</string>
+    <string name="action_register">Register</string>
+    <string name="register_successful">"You\'ve successfully registered your account"</string>
+    <string name="register_failed">"Register failed, please check your internet connection"</string>
+    <string name="register_invalid">The email you entered is already in use</string>
+    <string name="register_timeout">Register failed, please try again</string>
+
+    <!-- Strings related to login -->
+    <string name="login_headline">Welcome back,</string>
+    <string name="login_subtitle">Log in now to continue</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_login">Log In</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="login_successful">You\'ve successfully logged in</string>
+    <string name="login_failed">"Login failed, please check your internet connection"</string>
+    <string name="login_invalid">The email or password you entered is incorrect or not registered</string>
+    <string name="login_timeout">Login failed, please try again</string>
+
+    <!-- Strings related to login and register-->
+    <string name="bmi_headline">BMI Calculator</string>
+    <string name="bmi_subtitle">Please fill to continue</string>
+    <string name="prompt_name">Name</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_gender">Gender</string>
+    <string name="prompt_weight">Weight (kg)</string>
+    <string name="prompt_height">Height (cm)</string>
+    <string name="prompt_birth_date">Birth Date</string>
+    <string name="hint_name">Enter your full name</string>
+    <string name="hint_email">Enter your email address</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="hint_gender">Men</string>
+    <string name="hint_weight">Enter your weight</string>
+    <string name="hint_height">Enter your height</string>
+    <string name="hint_birth_date">Enter your birth date</string>
+    <string name="invalid_text">This field cannot be empty</string>
+    <string name="invalid_email">Not a valid email address</string>
+    <string name="invalid_password">Password must be longer than 8 characters</string>
+    <string name="register_condition">if you don\'t have an account</string>
+    <string name="login_condition">Already have an account?</string>
+
+    <string name="logout">Log out</string>
+    <string name="message_logout">Are you sure you want to logout?</string>
+    <string name="negative_logout">Cancel</string>
+    <string name="logout_successful">You\'ve successfully logged out</string>
+
+    <!-- Strings related to scan camera-->
+    <string name="permission_not_granted">Cannot access the camera, please check app permissions</string>
+    <string name="capture_failed">Failed to take a picture</string>
+    <string name="camera_failed">Failed to show the camera</string>
+
+    <string name="title_discard_scan">Discard scan?</string>
+    <string name="message_discard_scan">Are you sure you want to discard the scan results? if you go back now, you\'ll lose the scan results you\'ve made.</string>
+    <string name="positive_discard_scan">Discard</string>
+    <string name="negative_discard_scan">Cancel</string>
+
+    <string name="title_discard_edit">Discard edits?</string>
+    <string name="message_discard_edit">Are you sure you want to discard the edits? if you go back now, you\'ll lose all edits you\'ve made.</string>
+    <string name="negative_discard_edit">Cancel</string>
+    <string name="scan">Scan</string>
+    <string name="scan_successful">The food you eat is</string>
+    <string name="scan_failed">Failed to recognize food, please check your internet connection</string>>
+    <string name="scan_timeout">Failed to recognize food, please try again</string>
+    <string name="next">Next</string>
+
+    <string name="edit_profile_successful">User successfully updated</string>
+    <string name="edit_profile_failed">Failed to update user, please check your internet connection</string>>
+    <string name="edit_profile_timeout">Failed to update user, please try again</string>
+
+    <string name="prompt_restaurant">Restaurant</string>
+    <string name="prompt_food">Food</string>
+    <string name="prompt_quantity">Quantity</string>
+    <string name="hint_restaurant">Select Restaurant</string>
+    <string name="hint_food">Select Food</string>
+    <string name="hint_quantity">Enter the quantity of food</string>
+    <string name="action_calculate">I Ate This!</string>
+
+    <string name="today_date">Today, Dec 23</string>
+    <string name="welcoming_text">Hello, Bujang!</string>
+    <string name="calorie_needs_per_day">Calorie needs per day</string>
+    <string name="eaten">Eaten</string>
+    <string name="eaten_calories">2198 Kcal</string>
+    <string name="burned">Burned</string>
+    <string name="burned_calories">2891 Kcal</string>
+    <string name="food">Food</string>
+    <string name="activity">Activity</string>
+    <string name="time">Time</string>
+    <string name="total_calories">540 cal</string>
+    <string name="welcoming_hello">Hello,</string>
+    <string name="today">Today,</string>
+    <string name="prompt_time_spent">Time Spent (Minute)</string>
+    <string name="hint_time_spent">Enter the time you want to spend</string>
+    <string name="prompt_calories">Calories (Kcal)</string>
+    <string name="hint_calories">Enter the calories you want to burn</string>
+    <string name="desc_iv_exercise">Exercise illustration</string>
+    <string name="action_get_started">Get Started</string>
+    <string name="desc_iv_profile">Profile Picture</string>
+    <string name="prompt_account">Account</string>
+    <string name="prompt_edit_profile">Edit Profile</string>
+    <string name="prompt_photos">Photos</string>
+    <string name="prompt_log_out">Log Out</string>
+    <string name="prompt_bmi">BMI</string>
+    <string name="action_edit_profile">Edit Profile</string>
+    <string name="action_change_profile_picture">Change Profile Picture</string>
+    <string name="prompt_ok">OK</string>
+    <string name="hint_exercise_hours">Enter your exercise hours today</string>
+    <string name="hint_select_exercise">Select Exercise</string>
+    <string name="prompt_exercise">Exercise</string>
+    <string name="prompt_description">Description</string>
+    <string name="hint_time_spent_excercise">Enter the time you have spent</string>
+    <string name="yes">Yes</string>
+    <string name="negative_excercise">No</string>
+    <string name="message_excercise">Have you finished your exercise</string>
+    <string name="date">Date</string>
+    <string name="calories">Cal</string>
+    <string name="quantity">Qty</string>
+</resources>

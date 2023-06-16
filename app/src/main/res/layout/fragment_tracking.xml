@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.exercise.fragment.TrackingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:text="@string/prompt_exercise"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:elevation="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_5sdp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinner_exercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="@dimen/_16sdp"
+                    android:inputType="none"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:text="@string/hint_select_exercise"
+                    tools:ignore="LabelFor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:text="@string/prompt_time_spent"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp" />
+
+        <EditText
+            android:id="@+id/ed_exercise_hours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/background_rounded_outlined_grey"
+            android:drawablePadding="@dimen/_16sdp"
+            android:hint="@string/hint_time_spent_excercise"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tv_exercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:text="@string/prompt_exercise"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_desc_exercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            android:visibility="gone"
+            tools:text="Referring to a general type of aerobic exercise that does not have additional explanations about the impact or specific type. This general aerobic exercise includes various cardiovascular movements such as steps, jumps, arm movements, and energetic body movements." />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_46ssp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:layout_marginEnd="@dimen/_46sdp"
+            android:text="@string/prompt_ok"
+            app:cornerRadius="@dimen/_6sdp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

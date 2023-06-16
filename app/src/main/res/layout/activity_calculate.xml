@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.camera.CalculateActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/layout_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_bottom"
+            android:backgroundTint="@color/primaryColorBlue"
+            android:elevation="@dimen/_4sdp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Scan"
+            app:titleTextColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@id/layout_app_bar">
+
+            <TextView
+                android:id="@+id/tv_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="@dimen/_12sdp"
+                tools:text="Burger"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_22ssp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layout_preview"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@drawable/background_rounded_outlined_grey"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/layout_btn_bottom"
+                app:layout_constraintTop_toBottomOf="@id/layout_app_bar">
+
+                <ImageView
+                    android:id="@+id/iv_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/burger"
+                    android:contentDescription="@string/action_calculate" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:text="@string/prompt_restaurant"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:elevation="@dimen/_4sdp"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinner_restaurant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="@dimen/_16sdp"
+                        android:inputType="none"
+                        android:paddingStart="@dimen/_16sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_16sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:text="@string/hint_restaurant"
+                        tools:ignore="LabelFor" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:text="@string/prompt_food"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:elevation="@dimen/_4sdp"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinner_food"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="@dimen/_16sdp"
+                        android:inputType="none"
+                        android:paddingStart="@dimen/_16sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_16sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:text="@string/hint_food"
+                        tools:ignore="LabelFor"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:text="@string/prompt_quantity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp" />
+
+            <EditText
+                android:id="@+id/ed_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@drawable/background_rounded_outlined_grey"
+                android:drawablePadding="@dimen/_16sdp"
+                android:hint="@string/hint_quantity"
+                android:inputType="number"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_12sdp"
+                android:autofillHints="" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_finish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_46ssp"
+                android:layout_marginTop="@dimen/_28sdp"
+                android:layout_marginEnd="@dimen/_46sdp"
+                android:text="@string/action_calculate"
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/_6sdp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

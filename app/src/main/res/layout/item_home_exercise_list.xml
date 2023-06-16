@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/_4sdp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_exercise_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Badminton"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_exercise_name">
+
+        <TextView
+            android:id="@+id/tv_exercise_duration"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_weight="2"
+            tools:text="1 hr 30 min"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_exercise_time"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="06/16/2023"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_exercise_calorie"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            tools:text="475,5"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

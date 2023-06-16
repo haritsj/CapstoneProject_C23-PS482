@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.register.FirstRegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_16sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome,"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_26ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up to continue"
+            android:textColor="@color/subtitleTextOpacity50"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/signup_image_one" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_name"
+            android:textColor="@color/subtitleTextOpacity50"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            app:hintEnabled="false"
+            app:startIconDrawable="@drawable/ic_name">
+
+            <com.project.capstoneapp.ui.auth.customview.MyTextEditText
+                android:id="@+id/ed_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_name"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_12sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/prompt_email"
+            android:textColor="@color/subtitleTextOpacity50"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            app:hintEnabled="false"
+            app:startIconDrawable="@drawable/ic_email">
+
+            <com.project.capstoneapp.ui.auth.customview.MyEmailEditText
+                android:id="@+id/ed_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_12sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/prompt_password"
+            android:textColor="@color/subtitleTextOpacity50"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:inputType="textPassword"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@drawable/ic_password">
+
+            <com.dicoding.mystoryapp.ui.customview.MyPasswordEditText
+                android:id="@+id/ed_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_password"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_12sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.dicoding.mystoryapp.ui.customview.MyAuthButton
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_32sdp"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            app:cornerRadius="@dimen/_6sdp" />
+
+        <LinearLayout
+            android:id="@+id/layout_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:transitionName="layoutlabel">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_condition"
+                android:textColor="@color/bodyText" />
+
+            <TextView
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/action_login"
+                android:textColor="@color/primaryColorYellow"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

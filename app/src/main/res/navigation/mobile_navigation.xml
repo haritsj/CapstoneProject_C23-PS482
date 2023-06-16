@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.project.capstoneapp.ui.main.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_exercise"
+        android:name="com.project.capstoneapp.ui.main.exercise.ExerciseFragment"
+        android:label="@string/title_exercise"
+        tools:layout="@layout/fragment_exercise" />
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.project.capstoneapp.ui.main.history.HistoryFragment"
+        android:label="@string/title_history"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.project.capstoneapp.ui.main.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_editProfileActivity"
+            app:destination="@id/editProfileActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/trackingFragment"
+        android:name="com.project.capstoneapp.ui.main.exercise.fragment.TrackingFragment"
+        android:label="fragment_tracking"
+        tools:layout="@layout/fragment_tracking">
+        <action
+            android:id="@+id/action_trackingFragment_to_navigation_history"
+            app:destination="@id/navigation_history" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formRecommendationFragment"
+        android:name="com.project.capstoneapp.ui.main.exercise.fragment.recommendationfragment.FormRecommendationFragment"
+        android:label="fragment_form_recommendation"
+        tools:layout="@layout/fragment_form_recommendation" />
+
+    <activity
+        android:id="@+id/editProfileActivity"
+        android:name="com.project.capstoneapp.ui.main.profile.EditProfileActivity"
+        android:label="activity_edit_profile"
+        tools:layout="@layout/activity_edit_profile" />
+
+    <fragment
+        android:id="@+id/listRecommendationFragment"
+        android:name="com.project.capstoneapp.ui.main.exercise.fragment.recommendationfragment.ListRecommendationFragment"
+        android:label="fragment_list_recommendation"
+        tools:layout="@layout/fragment_list_recommendation" >
+        <action
+            android:id="@+id/action_listRecommendationFragment_to_navigation_history"
+            app:destination="@id/navigation_history" />
+    </fragment>
+</navigation>

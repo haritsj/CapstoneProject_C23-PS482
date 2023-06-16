@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.register.SecondRegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bmi_headline"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_26ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bmi_subtitle"
+                android:textColor="@color/subtitleTextOpacity50"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/signup_image_two"
+                android:contentDescription="@string/action_sign_in" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prompt_gender"
+                android:textColor="@color/subtitleTextOpacity50"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:orientation="horizontal"
+                app:startIconDrawable="@drawable/ic_gender">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinner_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:text="@string/hint_gender"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/prompt_weight"
+                android:textColor="@color/subtitleTextOpacity50"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:startIconDrawable="@drawable/ic_weight">
+
+                <com.project.capstoneapp.ui.auth.customview.MyTextEditText
+                    android:id="@+id/ed_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_weight"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/prompt_height"
+                android:textColor="@color/subtitleTextOpacity50"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:startIconDrawable="@drawable/ic_height">
+
+                <com.project.capstoneapp.ui.auth.customview.MyTextEditText
+                    android:id="@+id/ed_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_height"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/prompt_birth_date"
+                android:textColor="@color/subtitleTextOpacity50"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:startIconDrawable="@drawable/ic_age">
+
+                <com.project.capstoneapp.ui.auth.customview.MyTextEditText
+                    android:id="@+id/ed_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/hint_birth_date"
+                    android:drawableEnd="@drawable/ic_calendar"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:text="@string/action_register"
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/_6sdp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
